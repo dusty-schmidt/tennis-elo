@@ -1,0 +1,18 @@
+# Tennis ELO Prediction Engine - Dependencies
+
+# Core
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Database
+# sqlite3 is built into Python
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Development (optional)
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.0.0
