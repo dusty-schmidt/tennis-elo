@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tennis-elo"
-version = "1.0.0"
+version = "1.0.1"
 description = "Tennis match prediction engine using ELO ratings with surface-specific adjustments"
 readme = "README.md"
 requires-python = ">=3.10"
