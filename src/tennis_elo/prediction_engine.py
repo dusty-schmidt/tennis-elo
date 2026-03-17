@@ -295,3 +295,26 @@ if __name__ == "__main__":
         print(f"Error: {result['error']}")
     
     print("\n" + "="*70)
+
+    def get_confidence_label(self, probability):
+        """Get human-readable confidence label from probability.
+
+        Args:
+            probability: Win probability (0.0-1.0)
+
+        Returns:
+            str: Confidence label (Low, Moderate, High, Very High)
+        """
+        diff = abs(probability - 0.5) * 2  # Normalize to 0-1
+
+        if diff < 0.1:
+            return "Toss-up"
+        elif diff < 0.2:
+            return "Low"
+        elif diff < 0.4:
+            return "Moderate"
+        elif diff < 0.6:
+            return "High"
+        else:
+            return "Very High"
+

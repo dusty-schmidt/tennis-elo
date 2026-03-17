@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `get_confidence_label()` method for human-readable confidence levels
+- Enhanced confidence classification (Toss-up, Low, Moderate, High, Very High)
+
+### Changed
+- N/A
+
+### Fixed
+- N/A
+
+---
+
+
 ### Planned
 - Head-to-head record integration
 - Serve/return ELO splits
