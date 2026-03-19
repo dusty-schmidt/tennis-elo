@@ -1,0 +1,6 @@
+[flake8]
+max-line-length = 100
+exclude = .git,__pycache__,venv,.mypy_cache,.pytest_cache
+ignore = E501,W293,W291,E402,F401
+per-file-ignores =
+    tests/*:E402,F401
