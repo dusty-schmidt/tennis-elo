@@ -15,6 +15,11 @@ class TennisELODatabase:
         c.row_factory = sqlite3.Row
         return c
 
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        return False
+
     def get_top_elo(self, tour=None, limit=10):
         """Get top players by career ELO. tour: 'ATP', 'WTA', or None for both"""
         conn = self._conn()

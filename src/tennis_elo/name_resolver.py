@@ -31,6 +31,11 @@ class PlayerNameResolver:
         conn.row_factory = sqlite3.Row
         return conn
 
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        return False
+
     def normalize_name(self, name: str) -> str:
         """
         Normalize name for comparison:
