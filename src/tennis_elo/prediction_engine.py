@@ -322,7 +322,9 @@ if __name__ == "__main__":
     print("\n🎾 Test: De Minaur vs Fils at Miami Open")
     result = engine.predict_match("De Minaur", "Fils", "Miami Open")
 
-    if "error" not in result:
+    if result is None:
+        print("Error: Could not get prediction result")
+    elif "error" not in result:
         p1, p2 = result["match"]["player1"], result["match"]["player2"]
         print(
             f"\n{p1['name']}: {p1['win_percentage']} (yELO: {p1['yelo']}, {p1['yelo_matches']} matches)"
